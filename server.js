@@ -1,13 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const jwt = require("jsonwebtoken")
+const env = require("dotenv")
+env.config()
+const SECRET = process.env.SECRET_TOKEN
 
 const port = process.env.PORT || 7000;
 const bodyParser = require("body-parser");
 const fileRoutes = require("./routes/file-upload-routes");
 const path = require("path");
 
-const DB_ONLINE = "mongodb+srv://shotkode:shotkode@cluster0.2kfdg.mongodb.net/shotkodeDB?retryWrites=true&w=majority";
+const DB_ONLINE = "mongodb+srv://shotcode:ilovemusic1234@cluster0.g51is.mongodb.net/shotcode?retryWrites=true&w=majority";
 
 const app = express();
 
